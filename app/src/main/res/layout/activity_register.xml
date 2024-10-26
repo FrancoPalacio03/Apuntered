@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register_Activity"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50sp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro"
+            android:textSize="30sp"
+            android:layout_marginBottom="20sp"
+            />
+
+        <EditText
+            android:id="@+id/editTextText3"
+            android:layout_width="match_parent"
+            android:paddingBottom="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Nombre" />
+
+        <EditText
+            android:id="@+id/editTextText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20sp"
+            android:layout_marginBottom="20sp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Apellido" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20sp"
+            android:layout_marginBottom="20sp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:text="Email"/>
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20sp"
+            android:layout_marginBottom="20sp"
+            android:ems="10"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/editTextText5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20sp"
+            android:layout_marginBottom="20sp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Universidad" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Soy Autodidacta" />
+
+        <EditText
+            android:id="@+id/editTextText6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20sp"
+            android:layout_marginBottom="20sp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Orientacion" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="64dp"
+            android:enabled="false"
+            android:text="@string/action_register"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:layout_constraintVertical_bias="0.153" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
