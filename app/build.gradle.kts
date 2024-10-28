@@ -7,6 +7,9 @@ android {
     namespace = "com.example.apuntered"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
     defaultConfig {
         applicationId = "com.example.apuntered"
         minSdk = 26
@@ -33,9 +36,8 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        viewBinding = true
-    }
+
+
 }
 
 dependencies {

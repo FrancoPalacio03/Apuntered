@@ -13,6 +13,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
+import com.example.apuntered.MainActivity
 import com.example.apuntered.databinding.ActivityLoginBinding
 
 import com.example.apuntered.R
@@ -62,7 +63,7 @@ class LoginActivity : AppCompatActivity() {
             if (loginResult.success != null) {
                 updateUiWithUser(loginResult.success)
             }
-            setResult(Activity.RESULT_OK)
+            setResult(RESULT_OK)
 
             //Complete and destroy login activity once successful
             finish()
@@ -111,12 +112,15 @@ class LoginActivity : AppCompatActivity() {
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
         val displayName = model.displayName
-        // TODO : initiate successful logged in experience
         Toast.makeText(
             applicationContext,
             "$welcome $displayName",
             Toast.LENGTH_LONG
         ).show()
+
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish() // Cierra LoginActivity para que el usuario no vuelva a ella al presionar atrás
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {
